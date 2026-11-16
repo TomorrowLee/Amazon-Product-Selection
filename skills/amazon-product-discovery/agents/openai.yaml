@@ -1,0 +1,4 @@
+interface:
+  display_name: "亚马逊选品研究"
+  short_description: "从公开资料发现需求，核验亚马逊供给与差异化，并形成可追溯选品证据"
+  default_prompt: "使用 $amazon-product-discovery，根据我的选品范围，从公开来源发现需求并回到亚马逊核验，输出机会卡、反证与下一步验证。"

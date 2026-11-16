@@ -6,6 +6,43 @@
 
 **把选品分成三个不同的问题：买家有什么事没解决？有没有证据表明他会在亚马逊买？我们能否在目标价格下解决它并赚钱？** 第一个问题可以从社区、评论、众筹和其他平台发掘；第二个要回 Amazon US；第三个要靠实物、报价和测试。单一榜单、搜索量、评论数或 AI 分数回答不了这三个问题。
 
+## 可安装的选品 Skill
+
+[查看 Skill](skills/amazon-product-discovery/SKILL.md) · [方法执行卡](skills/amazon-product-discovery/references/methods.md) · [机会卡模板](skills/amazon-product-discovery/assets/opportunity-card.md)
+
+技能名称：`amazon-product-discovery`。支持选品方法研究、场景机会扫描、候选复核以及评论、众筹等单项研究。它把下方手册的 11 种方法转成按任务选用的操作流程，优先使用公开资料，结论带来源、日期、口径和反证。
+
+### 安装与调用
+
+使用支持 GitHub 目录的 Skill 安装器，指定本仓库及目录 `skills/amazon-product-discovery`，安装整个文件夹，包括 `references/`、`assets/` 和 `agents/`。只复制入口文件会缺少方法与模板。仓库上传与本机安装是两个步骤。
+
+在有 Skill 安装器的 Codex 中，可以发送：
+
+> 请从 https://github.com/TomorrowLee/Amazon-Product-Selection 安装 skills/amazon-product-discovery 目录中的 Skill。
+
+安装并在当前工具中可用后，可按任务调用：
+
+```text
+使用 $amazon-product-discovery，研究适合亚马逊美国站的选品方法，
+从公开社区、官方资料、GitHub 和众筹网站寻找做法，比较适用条件，
+输出方法、来源和验证流程。
+```
+
+```text
+使用 $amazon-product-discovery，从美国用户的使用困难出发，
+研究我指定场景的需求机会，回 Amazon 验证供给，
+输出机会卡、改进假设、反证和最低成本验证动作。
+```
+
+```text
+使用 $amazon-product-discovery，按当前项目已经确认的标准复核候选，
+分别列出已证实不符与未获取字段，并附来源和日期。
+```
+
+Skill 会读取所在项目的规则及可用的标准文件。下方手册中的销量、上架、Review、变体数字是原项目配置，安装到其他项目时不会自动作为通用门槛。无账号数据权限时，以公开资料开展研究并保留缺口；采购、联系供应商、广告投放和最终决策不因调用本 Skill 自动获准。
+
+---
+
 ## 一、11 种方法：每种该什么时候用
 
 | 方法 | 如何执行 | 如何判断走错了 |
@@ -67,3 +104,4 @@
 > **我们的改法**：消掉哪个实际麻烦？样品怎么验收？  
 > **反证和处置**：什么观察会让我们停止？继续补证、试样，还是排除？  
 > **来源记录**：链接、日期、站点、层级、指标口径和缺失字段。
+
